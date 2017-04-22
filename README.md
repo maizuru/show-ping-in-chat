@@ -14,8 +14,8 @@ Turn it off with `!ping off`
 
 Or simply use `!ping` to toggle between on / off
 
-Modify `index.js` to configure the following:
+Modify the numbers in `index.js` to configure:
 ```
-const INTERVAL = 3000; // Sets the frequency to ping in milliseconds (ms)
+const INTERVAL = 2000; // Sets the frequency to ping in milliseconds (ms)
 const CHAT_CHANNEL = 24; // Sets which channel to display the ping message
 ```
