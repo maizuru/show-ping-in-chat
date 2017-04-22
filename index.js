@@ -1,7 +1,7 @@
 // Show ping in chat
 
 // Configs
-const INTERVAL = 3000; // Sets the frequency to ping in milliseconds (ms)
+const INTERVAL = 2000; // Sets the frequency to ping in milliseconds (ms)
 const CHAT_CHANNEL = 24; // Sets which channel to display the ping message
 
 module.exports = function ShowPingInChat(dispatch) {
@@ -28,7 +28,7 @@ module.exports = function ShowPingInChat(dispatch) {
         enabled = enable;
         if (enabled) {
             const frequency = INTERVAL / 1000;
-            printMessage('Ping : Requesting ping every ' + frequency + 'second(s)', CHAT_CHANNEL);
+            printMessage('Ping : Requesting ping every ' + frequency + ' second(s)', CHAT_CHANNEL);
         } else {
             printMessage('Ping : Auto ping is now off', CHAT_CHANNEL);
         }
