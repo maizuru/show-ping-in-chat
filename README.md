@@ -14,6 +14,8 @@ Ping the server in fixed interval and log it to chat
 
 `!ping` Shortcut toggle between `!ping on` / `!ping off`
 
+----
+
 `!ping warn 300` Display warning when ping exceeds 300ms
 
 `!ping warn on` Turn on warnings (show ping in red)
