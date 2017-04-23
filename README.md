@@ -6,7 +6,9 @@ Ping the server in fixed interval and log it to chat
 
 ![screen cap](http://i.imgur.com/AXmnie8.png)
 
-**Usage:**
+----
+
+**Commands for displaying ping:**
 
 `!ping on` Ping the server in fixed intervals
 
@@ -15,6 +17,8 @@ Ping the server in fixed interval and log it to chat
 `!ping` Shortcut toggle between `!ping on` / `!ping off`
 
 ----
+
+**Commands for displaying warnings:**
 
 `!ping warn 300` Display warning when ping exceeds 300ms
 
