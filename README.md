@@ -20,6 +20,8 @@ Ping the server in fixed interval and log it to chat
 
 `!ping warn off` Turn off warnings
 
+`!ping warn` Shortcut toggle for `!ping warn on` / `!ping warn off`
+
 Modify the numbers in `index.js` to configure:
 ```
 const INTERVAL = 2000; // Sets the frequency to ping in milliseconds (ms)
