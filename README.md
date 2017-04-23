@@ -8,6 +8,8 @@ Ping the server in fixed interval and log it to chat
 
 ----
 
+## Usage
+
 **Commands for displaying ping:**
 
 `!ping on` Ping the server in fixed intervals
@@ -15,8 +17,6 @@ Ping the server in fixed interval and log it to chat
 `!ping off` Stop pinging the server
 
 `!ping` Shortcut toggle between `!ping on` / `!ping off`
-
-----
 
 **Commands for displaying warnings:**
 
