@@ -92,6 +92,9 @@ module.exports = function ShowPingInChat(dispatch) {
             toggle(false);
         } else if (event.message.includes('!ping')) {
             toggle(!enabled);
+        } else {
+            return;
         }
+        return false;
     });
 }
