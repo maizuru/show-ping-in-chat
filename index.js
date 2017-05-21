@@ -3,12 +3,12 @@
 // Configs
 const INTERVAL = 2000; // Sets the frequency to ping in milliseconds (ms)
 const CHAT_CHANNEL = 12; // Sets which channel to display the ping message (Hint: 10 + n where n = private channel number)
-const DEFAULT_WARN_THRESHOLD = 250; // Default threshold for warning when the module loads, you can change this value in game
+const DEFAULT_WARN_THRESHOLD = 280; // Default threshold for warning when the module loads, you can change this value in game
 
 module.exports = function ShowPingInChat(dispatch) {
     let enabled = false;
     let pending = false;
-    let warn = false;
+    let warn = true;
     let threshold = DEFAULT_WARN_THRESHOLD;
     let pingStart = Date.now();
 
