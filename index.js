@@ -24,11 +24,12 @@ module.exports = function ShowPingInChat(dispatch) {
         }
         pingStart = Date.now();
         pending = true;
-        dispatch.toServer('C_REQUEST_GAMESTAT_PING', 1);
+        dispatch.toServer('C_REQUEST_GAMESTAT_PING', '*');
     };
 
     const toggle = (enable) => {
         enabled = enable;
+        pending = false;
         if (enabled) {
             const frequency = INTERVAL / 1000;
             printMessage('Ping : Requesting ping every ' + frequency + ' second(s)', CHAT_CHANNEL);
@@ -57,7 +58,7 @@ module.exports = function ShowPingInChat(dispatch) {
 		});
 	};
 
-    dispatch.hook('S_RESPONSE_GAMESTAT_PONG', 1, (event) => {
+    dispatch.hook('S_RESPONSE_GAMESTAT_PONG', '*', (event) => {
         ping = Date.now() - pingStart;
         if (enabled && pending) {
             let message = 'Ping : ' + ping + 'ms';
@@ -72,7 +73,7 @@ module.exports = function ShowPingInChat(dispatch) {
         pending = false;
     });
 
-    dispatch.hook('C_CHAT', 1, (event) => {
+    dispatch.hook('C_CHAT', '*', (event) => {
         // Sets the threshold for warning
         const thresholdRegex = /!ping warn ([0-9]+)/;
         const match = thresholdRegex.exec(event.message);
